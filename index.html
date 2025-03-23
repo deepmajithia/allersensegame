@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllerSense: Mow On!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="loading-screen" class="hidden">
+            <div class="loading-content">
+                <h1>AllerSense: Mow On!</h1>
+                <p>Loading...</p>
+            </div>
+        </div>
+        
+        <div id="start-screen">
+            <h1>AllerSense: Mow On!</h1>
+            <p>Balance efficient mowing with allergen avoidance in this first-person lawn mower simulation!</p>
+            <p>Collect powerups to manage your allergy level while mowing as much grass as possible.</p>
+            <button id="start-button">Start Mowing!</button>
+            
+            <div id="controls-info">
+                <h2>Controls:</h2>
+                <p>W, A, S, D - Move the lawn mower</p>
+                <p>Mouse - Look around</p>
+                <p>1, 2, 3 - Select powerup</p>
+                <p>Space - Use active powerup</p>
+                <p>ESC - Pause game</p>
+            </div>
+        </div>
+        
+        <div id="game-ui" class="hidden">
+            <div id="allergy-meter">
+                <span>Allergy: </span>
+                <div class="meter-bar">
+                    <div class="meter-fill"></div>
+                </div>
+            </div>
+            
+            <div id="weather-display">
+                <span>Weather: </span>
+                <span id="weather-value">Sunny</span>
+            </div>
+            
+            <div id="pattern-display">
+                <span>Pattern: </span>
+                <span id="pattern-value">Square (1/5)</span>
+            </div>
+            
+            <div id="timer-display">
+                <span>Time: </span>
+                <span id="timer-value">1:00</span>
+            </div>
+            
+            <div id="score-display">
+                <span>Score: </span>
+                <span id="score-value">0</span>
+            </div>
+            
+            <div id="powerups">
+                <h3>Powerups:</h3>
+                <div class="powerup" id="powerup-1">
+                    <span>1: Mask (0)</span>
+                </div>
+                <div class="powerup" id="powerup-2">
+                    <span>2: Antihistamine (0)</span>
+                </div>
+                <div class="powerup" id="powerup-3">
+                    <span>3: Equipment (0)</span>
+                </div>
+            </div>
+            
+            <div id="minimap"></div>
+        </div>
+        
+        <div id="pause-screen" class="hidden">
+            <div class="pause-content">
+                <h2>Game Paused</h2>
+                <button id="resume-button">Resume</button>
+                <button id="restart-button">Restart</button>
+            </div>
+        </div>
+        
+        <div id="game-over-screen" class="hidden">
+            <div class="game-over-content">
+                <h2>Game Over</h2>
+                <p>Your Score: <span id="final-score">0</span></p>
+                <button id="play-again-button">Play Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="vibe-jam-link">
+        <a href="https://vibejam2025.com" target="_blank">Vibe Jam 2025</a>
+    </div>
+    
+    <!-- Three.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/PointerLockControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/loaders/GLTFLoader.js"></script>
+    
+    <!-- Game scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/grass.js"></script>
+    <script src="js/allergens.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/powerups.js"></script>
+    <script src="js/mower.js"></script>
+    <script src="js/patterns.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
